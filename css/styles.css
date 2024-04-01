@@ -2,3 +2,79 @@
     font-weight: 700;
     font-size: 7.5rem;
 }
+
+h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 7.5rem;
+    line-height: 100%;
+    /* Ultraviolet Nusp */
+    color: #af42ae;
+}
+
+h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 100%;
+    text-align: center;
+    color: #af42ae;
+}
+
+/* index.html - Home - BEGIN */
+
+.home {
+    margin: 50px;
+}
+
+.intro {
+    background: #fff4e9;
+}
+
+.intro__text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 125%;
+    color: #1c1f33;
+}
+
+.recent-works {
+    background: radial-gradient(73.03% 73.03% at 50% 50%, #af42ae 0%, #a8aec1 0%, #e8dbc5 83%);
+}
+
+.recent-works__heading {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 125%;
+    color: #1c1f33;
+}
+
+.recent-works__text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 150%;
+    color: #1c1f33;
+}
+
+.contact {
+    background: #fff4e9;
+}
+
+.contact__text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 125%;
+    color: #1c1f33;
+}
+
+/* index.html - Home - END */
