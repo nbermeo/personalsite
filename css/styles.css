@@ -9,7 +9,6 @@ h1 {
     font-weight: 700;
     font-size: 7.5rem;
     line-height: 100%;
-    /* Ultraviolet Nusp */
     color: #af42ae;
 }
 
@@ -23,14 +22,155 @@ h2 {
     color: #af42ae;
 }
 
-/* index.html - Home - BEGIN */
+/* header.html (Logo, Name, Navbar) - BEGIN */
 
-.home {
-    margin: 50px;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: #fff4e9;
 }
 
+.header__brand {
+    display: flex;
+}
+
+.header__name {
+    display: center;
+    align-items: left;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.875rem;
+    /* Black Gunmetal */
+    color: #1c1f33;
+    padding-left: 10px;
+}
+
+/* Navbar which includes the buttons for Works, About, Contact, Resume */
+.header__nav {
+    justify-items: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+
+    /* Portfolio text styles/base */
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+    color: #1c1f33;
+
+    padding: 10px;
+}
+
+/* Buttons */
+
+.header__works {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 8px;
+    justify-content: space-between;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: #1c1f33;
+
+    width: 107px;
+    height: 30px;
+
+    border-radius: 20px;
+}
+
+.header__about {
+    display: flex;
+    column-gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+
+    width: 50px;
+    height: 24px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+
+    color: #1c1f33;
+
+    width: 78px;
+    height: 30px;
+
+    border-radius: 20px;
+}
+
+.header__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 30px;
+    column-gap: 8px;
+
+    width: 180px;
+    height: 60px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #af42ae;
+
+    border: 1px solid #af42ae;
+    border-radius: 20px;
+}
+
+.header__resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 198px;
+    height: 60px;
+
+    align-items: center;
+    color: white;
+    background: #af42ae;
+    border-radius: 20px;
+    padding: 16px 30px;
+    column-gap: 8px;
+
+    /* White */
+    color: #ffffff;
+}
+
+/* header.html (Logo, Name, Navbar) - END */
+
+/* index.html - Home - BEGIN */
+
 .intro {
+    display: flex;
     background: #fff4e9;
+    background-size: cover;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    position: center;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .intro__text {
@@ -40,6 +180,16 @@ h2 {
     font-size: 1.875rem;
     line-height: 125%;
     color: #1c1f33;
+    position: center;
+    display: flex;
+    margin-right: 20px;
+}
+
+.intro__image {
+    position: center;
+    display: flex;
+    transform: scale(0.85);
+    margin-left: 20px;
 }
 
 .recent-works {
@@ -78,3 +228,40 @@ h2 {
 }
 
 /* index.html - Home - END */
+
+/* footer.html - begin */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+
+    width: 100%;
+    height: 86px;
+    background: #1c1f33;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+
+    /* Linen */
+    color: #fff4e9;
+}
+
+.footer__brand {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 6px;
+}
+
+.footer__contact {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+/* footer.html - end */

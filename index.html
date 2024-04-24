@@ -6,28 +6,31 @@
         <title>Nicole Bermeo</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/normalize.css" />
         <link rel="stylesheet" href="./css/styles.css" />
+        <!-- Code to add header navigation and footer to the top and bottom of every page on the site, allows code reusability -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+                $("#header").load("./header.html");
+                $("#footer").load("./footer.html");
+            });
+        </script>
     </head>
     <body>
-        <!-- TODO pull this out into reusable html-->
-        <header><!-- TODO logo and name -->Nicole Bermeo</header>
-        <nav>
-            <ul>
-                <li><a href="./works.html">Works</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./resume.pdf">View Resume</a></li>
-            </ul>
-        </nav>
-        <!--TODO  END pull this out into reusable html -->
+        <div id="header"></div>
         <main class="home">
             <section class="intro">
-                <h1>Hello, I'm Nicole Bermeo</h1>
-                <p class="intro__text">A UX Designer dedicated to collaborate solutions. I look forward to solving problems with you.</p>
-                <img class="intro__img" src="./images/home-intro-computer.svg" alt="computer"></image>
+                <div class="intro__heading">
+                    <h1>Hello, I'm Nicole Bermeo</h1>
+                    <p class="intro__text">A UX Designer dedicated to collaborate solutions. I look forward to solving problems with you.</p>
+                </div>
+                <div class="intro__image">
+                    <img src="./images/home-intro-computer.svg" alt="computer" />
+                </div>
             </section>
             <section class="recent-works">
                 <div class="recent-works__container">
@@ -62,6 +65,8 @@
                 <button class="contact__linkedin-btn"></button>
             </section>
         </main>
-        <footer></footer>
+        <div id="footer"></div>
+
+        <script src="scripts/index.js"></script>
     </body>
 </html>
