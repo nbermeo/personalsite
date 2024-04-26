@@ -24,47 +24,43 @@
         <div id="header"></div>
         <main class="main">
             <section class="intro">
-                <h1 class="intro__title">Subtrac</h1>
-                <p class="intro__text">Track your subscriptions instantly!</p>
+                <div class="intro__heading">
+                    <h1 class="intro__title">Subtrac</h1>
+                    <p class="intro__text">Track your subscriptions instantly!</p>
+                </div>
             </section>
-            <section class="project-image">
-                <image> <!-- TODO: add image --> </image>
-            </section>
+            <img src="./images/subtrac-banner.png" alt="subtrac" class="project__image" />
             <section class="project-brief">
                 <h2 class="project-brief__title">Project Brief</h2>
                 <p class="project-brief__description">Subtract, a budget and subscription tracker that will give you a “big-picture” view of your expenses and warn you of any upcoming payments. Email searches of subscriptions make it easy for users to find all their subscriptions and prevent any forgotten accounts.</p>
 
-                <section class="project-brief__role">
-                    <table>
-                        <tr>
-                            <td>Project Role</td>
-                            <td>Timeline</td>
-                            <td>Platform</td>
-                        </tr>
-                        <tr>
-                            <td>UX Designer</td>
-                            <td>December 2023 - January 2023</td>
-                            <td>Mobile application</td>
-                        </tr>
-                    </table>
-                </section>
-                <section class="project-brief__image">
-                    <image> <!-- TODO ADD IMAGE --></image>
-                </section>
-                <section class="project-brief__overview">
-                    <table>
-                        <tr>
-                            <td>Project Goals</td>
-                            <td>Key Challenges</td>
-                            <td>Target Users</td>
-                        </tr>
-                        <tr>
-                            <td>Assist users in tracking their subscriptions and visualize their spending</td>
-                            <td>How can I help users visualize their spending? Is there an easier way to find subscriptions with minimal input?</td>
-                            <td>Young to middle aged adults who have multiple subscription services.</td>
-                        </tr>
-                    </table>
-                </section>
+                <!-- TODO: Add thin line between each of the columns here -->
+                <table class="project-brief__role">
+                    <tr class="project-brief__title project-brief__role-item">
+                        <td>Project Role</td>
+                        <td>Timeline</td>
+                        <td>Platform</td>
+                    </tr>
+                    <tr class="project-brief__description project-brief__role-item">
+                        <td>UX Designer</td>
+                        <td>December 2023 - January 2023</td>
+                        <td>Mobile application</td>
+                    </tr>
+                </table>
+                <img src="./images/subtrac-brief-image.png" alt="subtrac-brief-image" class="project-brief__image" />
+                <p class="project-brief__image-description">Here we have the final frames of the homepage showing graphs of spending and an option to add subscriptions.</p>
+                <table class="project-metrics__overview">
+                    <tr class="project-metrics__title">
+                        <td>Project Goals</td>
+                        <td>Key Challenges</td>
+                        <td>Target Users</td>
+                    </tr>
+                    <tr class="project-metrics__description">
+                        <td>Assist users in tracking their subscriptions and visualize their spending</td>
+                        <td>How can I help users visualize their spending? Is there an easier way to find subscriptions with minimal input?</td>
+                        <td>Young to middle aged adults who have multiple subscription services.</td>
+                    </tr>
+                </table>
             </section>
             <section class="hero-intro">
                 <h2 class="hero-intro__title">Introducing the Hero</h2>
@@ -87,7 +83,7 @@
             </section>
             <section class="ideating">
                 <h2 class="ideating__title">Ideating & Brainstorming</h2>
-                <iamge><!-- TODO --></iamge>
+                <image><!-- TODO --></image>
                 <ul class="ideating__list">
                     <li>Figure A: Adam wants to be able to see his budget and funds at a glance. So I created sketches of what kind of graphs should be included in the home screen.</li>
                     <li>Figure B: I got some great ideas such as using pie and line graphs, using the same email from sign-in, and a end-of-year wrap that was inspired by Spotify wrap.</li>
