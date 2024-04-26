@@ -25,6 +25,9 @@ h2 {
 /* header.html (Logo, Name, Navbar) - BEGIN */
 
 .header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,10 +74,11 @@ h2 {
     padding: 10px;
 }
 
-/* Buttons */
+/* Works dropdown menu button */
 
 .header__works {
     display: flex;
+    position: relative;
     flex-direction: row;
     align-items: center;
     column-gap: 8px;
@@ -87,10 +91,73 @@ h2 {
     text-align: center;
     color: #1c1f33;
 
-    width: 107px;
-    height: 30px;
-
     border-radius: 20px;
+
+    transition: 0.1s ease-out;
+}
+
+.header__works-dropdown {
+    position: absolute;
+    top: 50%;
+    z-index: 100000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.1s ease-out;
+    background: #fff4e9;
+    padding: 27px 20px;
+    gap: 20px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.header__works-dropdown a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: 0.1s ease-out;
+}
+
+/* show dropdown content */
+.header__works:focus .header__works-dropdown {
+    transform: translateY(20px);
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Clicking on dropdown menu items will close the dropdown and redirect */
+.header__works .btn2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+.header__works:focus .btn2 {
+    display: inline-block;
+}
+
+.header__works .btn2:focus .header__works-dropdown {
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dropdown__link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: #1c1f33;
+}
+
+.dropdown__link:hover {
+    color: #af42ae;
 }
 
 .header__about {
@@ -160,7 +227,7 @@ h2 {
 
 /* header.html (Logo, Name, Navbar) - END */
 
-/* index.html - Home - BEGIN */
+/* index.html - Homepage - BEGIN */
 
 .intro {
     display: flex;
@@ -169,8 +236,14 @@ h2 {
     background-position-x: 0px;
     background-position-y: 0px;
     position: center;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    margin-top: 100px;
+}
+
+.intro__heading {
+    width: 60%;
 }
 
 .intro__text {
@@ -182,18 +255,22 @@ h2 {
     color: #1c1f33;
     position: center;
     display: flex;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .intro__image {
     position: center;
     display: flex;
     transform: scale(0.85);
-    margin-left: 20px;
+    margin-left: 10px;
+    width: 40%;
 }
+
+/* index.html - Homgepage - Recent Works - Begin */
 
 .recent-works {
     background: radial-gradient(73.03% 73.03% at 50% 50%, #af42ae 0%, #a8aec1 0%, #e8dbc5 83%);
+    padding: 100px;
 }
 
 .recent-works__heading {
@@ -214,8 +291,49 @@ h2 {
     color: #1c1f33;
 }
 
+.recent-works__container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.recent-works__item {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 30px 100px;
+    gap: 100px;
+
+    background: #fff4e9;
+
+    border-width: 0px 8px 8px 0px;
+    border-style: solid;
+    border-color: #e8dbc5;
+    border-radius: 10px;
+}
+
+.recent-works__project {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+/* index.html - Homgepage - Recent Works - End */
+
 .contact {
     background: #fff4e9;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.contact__heading {
+    text-align: left;
 }
 
 .contact__text {
@@ -223,8 +341,48 @@ h2 {
     font-style: normal;
     font-weight: 500;
     font-size: 1.875rem;
-    line-height: 125%;
     color: #1c1f33;
+}
+
+.contact__btns {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+.contact__email-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 50px;
+    gap: 8px;
+    background: #af42ae;
+    border-radius: 20px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #fff4e9;
+}
+
+.contact__linkedin-btn {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 50px;
+    gap: 8px;
+    border: 1px solid #af42ae;
+    border-radius: 20px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #af42ae;
 }
 
 /* index.html - Home - END */
@@ -256,6 +414,15 @@ h2 {
     display: flex;
     justify-content: space-between;
     column-gap: 6px;
+}
+
+.footer__name {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.875rem;
+    text-align: center;
+    color: #fff4e9;
 }
 
 .footer__contact {

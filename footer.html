@@ -1,14 +1,17 @@
+<!-- Reusable footer that is added to the bottom of every page on this site via jQuery -->
 <footer class="footer">
-    <div class="footer__brand" id="brand" onclick="redirectHome()">
+    <!-- Clickable brand button, event listener added by class "brand"-->
+    <a class="footer__brand" href="/">
         <img class="logo" src="./images/logofooter.png" alt="logofooter" />
         <div class="footer__name">Nicole Bermeo</div>
-    </div>
+    </a>
     <div class="footer__contact">
-        <button class="footer__email" onclick="">
+        <a class="footer__email" href="mailto:bermeo.nicole@gmail.com">
             <img src="./images/email.svg" alt="email" />
-        </button>
-        <button class="footer__linkedin" onclick="">
+        </a>
+        <a class="footer__linkedin" href="https://www.linkedin.com/in/nbermeo/" target="_blank">
             <img src="./images/linkedin.svg" alt="linkedin" />
-        </button>
+        </a>
     </div>
+    <script src="scripts/index.js"></script>
 </footer>

@@ -1,14 +1,33 @@
 <!-- Reusable navigation bar that is added to the top of every page on this site via jQuery -->
 <header class="header">
-    <div class="brand header__brand">
+    <a class="header__brand" href="/">
         <img class="logo" src="./images/logo.png" alt="logo" />
         <div class="header__name">Nicole Bermeo</div>
-    </div>
+    </a>
     <nav class="header__nav">
-        <button class="header__works" onclick=""><img src="./images/bag.svg" alt="bag" />Works<img src="./images/caretdown.svg" alt="caretdown" /></button>
+        <!-- from fiddle-->
+        <button class="header__works" tabindex="1">
+            <i class="btn2" tabindex="1"></i>
+            <img src="./images/bag.svg" alt="bag" />Works<img src="./images/caretdown.svg" alt="caretdown" />
+            <div class="header__works-dropdown">
+                <a class="header__buildathon dropdown__link" href="./buildathon.html">Buildathon</a>
+                <a class="header__subtrac dropdown__link" href="./subtrac.html">Subtrac</a>
+                <a class="header__prepper dropdown__link" href="./prepper.html">Prepper</a>
+            </div>
+        </button>
+        <!-- 
+        <button class="header__works" onclick="">
+            <img src="./images/bag.svg" alt="bag" />Works<img src="./images/caretdown.svg" alt="caretdown" />
+            <ul class="header__works-dropdown">
+                <li><a class="header__buildathon dropdown__link" href="./buildathon.html">Buildathon</a></li>
+                <li><a class="header__subtrac dropdown__link" href="./subtrac.html">Subtrac</a></li>
+                <li><a class="header__prepper dropdown__link" href="./prepper.html">Prepper</a></li>
+            </ul>
+        </button>
+    -->
         <a class="header__about" href="./about.html"><img src="./images/usercircle.svg" alt="usercircle" />About</a>
         <button class="header__contact" onclick=""><img src="./images/envelope.svg" alt="envelope" />Contact<img src="./images/caretdownpurple.svg" alt="caretdownpurple" /></button>
-        <a class="header__resume" href="./documents/resume.pdf"><img src="./images/scroll.svg" alt="scroll" />View Resume</a>
+        <a class="header__resume" href="./documents/resume.pdf" target="_blank"><img src="./images/scroll.svg" alt="scroll" />View Resume</a>
     </nav>
     <script src="scripts/index.js"></script>
 </header>
