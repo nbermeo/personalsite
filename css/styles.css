@@ -1,47 +1,74 @@
-.title {
-    font-weight: 700;
-    font-size: 7.5rem;
+/* All pages - Begin */
+
+a,
+a:hover,
+a:visited,
+a:active {
+    color: inherit;
+    text-decoration: none;
 }
 
 body {
     background: #fff4e9;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #1c1f33;
 }
 
 h1 {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 700;
     font-size: 7.5rem;
-    line-height: 100%;
+    line-height: 1;
     color: #af42ae;
 }
 
 h2 {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 600;
     font-size: 6rem;
-    line-height: 100%;
+    line-height: 1.2;
     text-align: center;
     color: #af42ae;
 }
 
 h3 {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 600;
     font-size: 3rem;
+    line-height: 1.2;
     text-align: center;
     color: #af42ae;
 }
 
 p {
-    line-height: 150%;
+    line-height: 1.5;
 }
+
+.bold__description {
+    font-weight: 600;
+}
+
+body .button__purple {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    align-self: center;
+    color: white;
+    background: #af42ae;
+    border-radius: 20px;
+    padding: 16px 30px;
+    column-gap: 8px;
+    max-width: fit-content;
+}
+
+/* All pages - end */
 
 /* header.html (Logo, Name, Navbar) - BEGIN */
 
-.header {
+body .header {
     position: fixed;
     top: 0;
     z-index: 10;
@@ -55,65 +82,53 @@ p {
     background: #fff4e9;
 }
 
-.header__brand {
+body .logo {
     display: flex;
+    height: 100%;
 }
 
-.header__name {
+body .header__brand {
+    display: flex;
+    align-items: center;
+}
+
+body .header__name {
     display: center;
     align-items: left;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 1.875rem;
-    /* Black Gunmetal */
-    color: #1c1f33;
     padding-left: 10px;
 }
 
 /* header.html - Navbar which includes the buttons for Works, About, Contact, Resume */
-.header__nav {
+body .header__nav {
     justify-items: right;
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 40px;
-
-    /* Portfolio text styles/base */
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
     font-size: 1rem;
-    line-height: 150%;
-    text-align: center;
-    color: #1c1f33;
 
     padding: 10px;
 }
 
 /* Works dropdown menu button */
 
-.header__works {
+body .header__works {
     display: flex;
     position: relative;
     flex-direction: row;
     align-items: center;
     column-gap: 8px;
     justify-content: space-between;
-
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
     font-size: 1rem;
     text-align: center;
-    color: #1c1f33;
 
     border-radius: 20px;
-
     transition: 0.1s ease-out;
 }
 
-.header__works-dropdown {
+body .header__works-dropdown {
     position: absolute;
     top: 50%;
     z-index: 100000;
@@ -126,7 +141,7 @@ p {
     border-radius: 0px 0px 10px 10px;
 }
 
-.header__works-dropdown a {
+body .header__works-dropdown a {
     color: black;
     padding: 12px 16px;
     display: block;
@@ -135,14 +150,14 @@ p {
 }
 
 /* show dropdown content */
-.header__works:focus .header__works-dropdown {
+body .header__works:focus .header__works-dropdown {
     transform: translateY(20px);
     visibility: visible;
     opacity: 1;
 }
 
 /* Clicking on dropdown menu items will close the dropdown and redirect */
-.header__works .btn2 {
+body .header__works .btn2 {
     position: absolute;
     top: 0;
     right: 0;
@@ -154,46 +169,30 @@ p {
     display: none;
 }
 
-.header__works:focus .btn2 {
+body .header__works:focus .btn2 {
     display: inline-block;
 }
 
-.header__works .btn2:focus .header__works-dropdown {
+body .header__works .btn2:focus .header__works-dropdown {
     outline: none;
     visibility: hidden;
     opacity: 0;
 }
 
-.dropdown__link {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
+body .dropdown__link {
     font-size: 1rem;
     text-align: center;
-    color: #1c1f33;
 }
 
-.dropdown__link:hover {
-    color: #af42ae;
-}
-
-.header__about {
+body .header__about {
     display: flex;
     column-gap: 8px;
     justify-content: space-between;
     align-items: center;
     padding: 0px;
 
-    width: 50px;
-    height: 24px;
-
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
     font-size: 1rem;
     text-align: center;
-
-    color: #1c1f33;
 
     width: 78px;
     height: 30px;
@@ -201,7 +200,7 @@ p {
     border-radius: 20px;
 }
 
-.header__contact {
+body .header__contact {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -209,37 +208,11 @@ p {
     padding: 16px 30px;
     column-gap: 8px;
 
-    width: 180px;
-    height: 60px;
-
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
     text-align: center;
     color: #af42ae;
 
     border: 1px solid #af42ae;
     border-radius: 20px;
-}
-
-.header__resume {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    width: 198px;
-    height: 60px;
-
-    align-items: center;
-    color: white;
-    background: #af42ae;
-    border-radius: 20px;
-    padding: 16px 30px;
-    column-gap: 8px;
-
-    /* White */
-    color: #ffffff;
 }
 
 /* header.html Navbar (Logo, Name, Navbar) - END */
@@ -257,12 +230,8 @@ p {
 }
 
 .intro__text {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 1.875rem;
-    line-height: 150%;
-    color: #1c1f33;
     display: flex;
 }
 
@@ -280,21 +249,15 @@ p {
 }
 
 .recent-works__heading {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 1.875rem;
-    line-height: 125%;
+    line-height: 1.25;
+    text-align: left;
     color: #1c1f33;
 }
 
 .recent-works__text {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
     font-size: 1.25rem;
-    line-height: 150%;
-    color: #1c1f33;
 }
 
 .recent-works__container {
@@ -340,11 +303,8 @@ p {
 }
 
 .contact__text {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 1.875rem;
-    color: #1c1f33;
 }
 
 .contact__btns {
@@ -353,7 +313,7 @@ p {
     column-gap: 50px;
 }
 
-.contact__email-btn {
+body .contact__email-btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -362,15 +322,12 @@ p {
     gap: 8px;
     background: #af42ae;
     border-radius: 20px;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 600;
-    font-size: 1.125rem;
     text-align: center;
     color: #fff4e9;
 }
 
-.contact__linkedin-btn {
+body .contact__linkedin-btn {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -380,10 +337,7 @@ p {
     gap: 8px;
     border: 1px solid #af42ae;
     border-radius: 20px;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 600;
-    font-size: 1.125rem;
     text-align: center;
     color: #af42ae;
 }
@@ -417,11 +371,7 @@ p {
 }
 
 .values__text {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
     font-size: 1.25rem;
-    color: #1c1f33;
 }
 
 .testimonials {
@@ -448,18 +398,11 @@ p {
 }
 
 .testimonial__text {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
     font-size: 1.25rem;
-    color: #1c1f33;
 }
 
 .testimonial__author {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 600;
-    font-size: 1.125rem;
     color: #000000;
 }
 
@@ -467,34 +410,42 @@ p {
 
 /* <project>.html - Begin */
 
-.project__image {
-    width: 100%;
+/* All <h2> on all project pages */
+.project__title {
+    font-weight: 600;
+    font-size: 3.75rem;
+    line-height: 1;
+    color: #af42ae;
+    text-align: center;
 }
 
-.project-brief {
+/* All <body class="project"/> on all project pages */
+body.project section,
+.project__column {
+    padding: 100px;
     display: flex;
     flex-direction: column;
-    padding: 80px 100px;
     gap: 40px;
 }
 
-.project-brief__title {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.125rem;
-    line-height: 150%;
-    color: #af42ae;
-    text-align: left;
+.project__row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
 }
 
-.project-brief__description {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
+body.project ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project__text-small {
     font-size: 1rem;
-    line-height: 150%;
-    color: #1c1f33;
+}
+
+.project__image {
+    width: 100%;
 }
 
 .project-brief__role {
@@ -504,19 +455,20 @@ p {
     border-spacing: 20px;
 }
 
+.project-brief__title {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #af42ae;
+}
+
 .project-brief__role-item {
     text-align: center;
     border: 1px solid #e8dbc5;
 }
 
 .project-brief__image-description {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
     font-size: 1.25rem;
-    line-height: 150%;
-
-    color: #1c1f33;
 }
 
 .project-metrics__overview {
@@ -524,27 +476,48 @@ p {
     align-items: center;
     border-spacing: 20px;
     background: #1c1f33;
+    padding: 80px 100px;
+    gap: 33px;
 }
 
 .project-metrics__title {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 600;
     font-size: 2.25rem;
-    line-height: 125%;
     text-align: center;
     color: #fff4e9;
 }
 
 .project-metrics__description {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 1.5rem;
-    line-height: 150%;
     text-align: center;
     color: #fff4e9;
 }
+
+.problem__summary {
+    display: table;
+    border-spacing: 10px;
+}
+
+.problem__row td {
+    font-size: 1rem;
+
+    border: 1px solid #e8dbc5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+
+    padding: 25px 50px;
+    gap: 10px;
+}
+
+.hero__image {
+    flex: 0 0 40%;
+    max-width: 100%;
+    height: auto;
+    margin-left: 100px;
+}
+
 /* <project>.html - End */
 
 /* footer.html - begin */
@@ -560,8 +533,6 @@ p {
     height: 86px;
     background: #1c1f33;
 
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 30px;
     text-align: center;
@@ -576,8 +547,6 @@ p {
 }
 
 .footer__name {
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 500;
     font-size: 1.875rem;
     text-align: center;
@@ -591,3 +560,33 @@ p {
 }
 
 /* footer.html - end */
+
+/* actions - on:hover , etc */
+body .dropdown__link:hover {
+    color: #af42ae;
+}
+
+body .contact__email-btn:hover,
+.button__purple:hover {
+    background: #8c358b;
+}
+
+body .contact__linkedin-btn:hover,
+.header__contact:hover {
+    background: #e6dcd285;
+}
+
+body .footer__email:hover,
+.footer__linkedin:hover {
+    opacity: 80%;
+}
+
+.header__works:hover {
+    opacity: 100%;
+}
+
+.header__works-bag:hover {
+    fill: #8c358b;
+}
+
+/* actions - end */
