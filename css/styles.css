@@ -66,7 +66,7 @@ body .button__purple {
 
 /* All pages - end */
 
-/* header.html (Logo, Name, Navbar) - BEGIN */
+/* header.js (Logo, Name, Navbar) - BEGIN */
 
 body .header {
     position: fixed;
@@ -87,7 +87,7 @@ body .logo {
     height: 100%;
 }
 
-body .header__brand {
+body .brand {
     display: flex;
     align-items: center;
 }
@@ -100,7 +100,7 @@ body .header__name {
     padding-left: 10px;
 }
 
-/* header.html - Navbar which includes the buttons for Works, About, Contact, Resume */
+/* header.js - Navbar which includes the buttons for Works, About, Contact, Resume */
 body .header__nav {
     justify-items: right;
     display: flex;
@@ -215,9 +215,9 @@ body .header__contact {
     border-radius: 20px;
 }
 
-/* header.html Navbar (Logo, Name, Navbar) - END */
+/* header.js Navbar (Logo, Name, Navbar) - END */
 
-/* index.html - Homepage - BEGIN */
+/* index.js - Homepage - BEGIN */
 
 .intro {
     display: flex;
@@ -241,7 +241,7 @@ body .header__contact {
     object-fit: scale-down;
 }
 
-/* index.html - Homgepage - Recent Works - Begin */
+/* index.js - Homgepage - Recent Works - Begin */
 
 .recent-works {
     background: radial-gradient(73.03% 73.03% at 50% 50%, #af42ae 0%, #a8aec1 0%, #e8dbc5 83%);
@@ -342,9 +342,9 @@ body .contact__linkedin-btn {
     color: #af42ae;
 }
 
-/* index.html - Home - END */
+/* index.js - Home - END */
 
-/* about.html - Begin */
+/* about.js - Begin */
 
 .values {
     display: flex;
@@ -406,9 +406,9 @@ body .contact__linkedin-btn {
     color: #000000;
 }
 
-/* about.html - End */
+/* about.js - End */
 
-/* <project>.html - Begin */
+/* <project>.js - Begin */
 
 /* All <h2> on all project pages */
 .project__title {
@@ -518,9 +518,9 @@ body.project ul {
     margin-left: 100px;
 }
 
-/* <project>.html - End */
+/* <project>.js - End */
 
-/* footer.html - begin */
+/* footer.js - begin */
 
 .footer {
     display: flex;
@@ -559,7 +559,7 @@ body.project ul {
     column-gap: 16px;
 }
 
-/* footer.html - end */
+/* footer.js - end */
 
 /* actions - on:hover , etc */
 body .dropdown__link:hover {

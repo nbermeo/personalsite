@@ -1,6 +1,8 @@
-<!-- Reusable navigation bar that is added to the top of every page on this site via jQuery -->
+// Create header element
+var header = document.createElement("header");
+header.innerHTML = `<!-- Reusable navigation bar that is added to the top of every page on this site via pure JS -->
 <header class="header">
-    <a class="header__brand" href="/">
+    <a class="brand" href="/">
         <img class="logo" src="./images/logo.png" alt="logo" />
         <div class="header__name">Nicole Bermeo</div>
     </a>
@@ -32,5 +34,9 @@
         <button class="header__contact" onclick=""><img src="./images/envelope.svg" alt="envelope" />Contact<img src="./images/caretdownpurple.svg" alt="caretdownpurple" /></button>
         <a class="button__purple" href="./documents/resume.pdf" target="_blank"><img src="./images/scroll.svg" alt="scroll" />View Resume</a>
     </nav>
-    <script src="scripts/index.js"></script>
-</header>
+</header>`;
+
+document.addEventListener("DOMContentLoaded", function () {
+    var body = document.querySelector("body");
+    body.insertBefore(header, body.firstChild);
+});

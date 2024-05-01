@@ -11,17 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="./css/normalize.css" />
         <link rel="stylesheet" href="./css/styles.css" />
-        <!-- Code to add header navigation and footer to the top and bottom of every page on the site, allows code reusability -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script>
-            $(function () {
-                $("#header").load("./header.html");
-                $("#footer").load("./footer.html");
-            });
-        </script>
     </head>
     <body>
-        <div id="header"></div>
         <main>
             <section class="intro">
                 <div class="intro__heading">
@@ -65,8 +56,7 @@
                 </div>
             </section>
         </main>
-        <div id="footer"></div>
-
-        <script src="scripts/index.js"></script>
+        <script src="./scripts/header.js"></script>
+        <script src="./scripts/footer.js"></script>
     </body>
 </html>
