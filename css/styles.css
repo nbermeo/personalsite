@@ -8,6 +8,15 @@ a:active {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.row-half-size {
+    max-width: 50%;
+}
+
 body {
     background: #fff4e9;
     font-family: "Montserrat";
@@ -179,16 +188,14 @@ body .header__nav {
 
     border: 1px solid #af42ae;
     border-radius: 20px;
-
-    transition: 0.1s ease-out;
 }
 
 .contact__dropdown-content {
     display: none;
     position: absolute;
+    top: 70%;
     z-index: 1;
     opacity: 100%;
-    transition: 0.1s ease-out;
     background: #fff4e9;
     padding: 5px;
     padding-bottom: 10px;
@@ -196,6 +203,12 @@ body .header__nav {
     border: 1px solid #af42ae;
     border-top: 0px;
     border-radius: 0px 0px 20px 20px;
+    transition: all 3s ease-in-out;
+    -webkit-transition: all 0.9s ease;
+    -moz-transition: all 0.9s ease;
+    -o-transition: all 0.9s ease;
+    -ms-transition: all 0.9s ease;
+    transition: all 0.9s ease;
 }
 
 .contact__dropdown-content a {
@@ -300,6 +313,12 @@ body .header__about {
     justify-content: space-between;
     flex-direction: column;
     row-gap: 50px;
+}
+
+.recent-works__img {
+    max-width: 340px;
+    max-height: 241px;
+    border-radius: 10px;
 }
 
 .contact {
@@ -451,6 +470,7 @@ body.project ul {
     flex-direction: column;
     gap: 20px;
     align-self: center;
+    list-style-position: inside;
 }
 
 .project__text-small {
@@ -533,10 +553,6 @@ body.project ul {
 
 .phone-radius {
     border-radius: 50px;
-}
-
-.proto-item {
-    max-width: 50%;
 }
 
 /* <project>.js - End */

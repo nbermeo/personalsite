@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Select the existing header element, and add in the header content
     var header = document.querySelector("header");
 
-    header.outerHTML = `<!-- Reusable navigation bar that is added to the top of every page on this site via pure JS -->
+    header.outerHTML = `
         <header class="header">
             <a class="brand" href="/">
                 <img class="logo" src="./images/logo.png" alt="logo" />
@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a class="works__dropdown-link" href="./prepper.html">Prepper</a>
                 </div>
 
-                <!-- TODO: Add purple on:hover version-->
                 <a class="header__about" href="./about.html"><img src="./images/usercircle.svg" alt="usercircle" />About</a>
                 <div class="header__contact">
                     <button class="contact__dropdown-btn"><img src="./images/envelope.svg" alt="envelope" />Contact<img src="./images/caretdownpurple.svg" alt="caretdownpurple" /></button>
@@ -31,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
         </header>`;
 
     // on click listeners to handle "Works" dropdown menu clicks
-    var worksToggle = document.getElementsByClassName("works__dropdown-btn")[0];
-    var worksDropdownContent = document.getElementsByClassName("works__dropdown-content")[0];
+    let worksToggle = document.getElementsByClassName("works__dropdown-btn")[0];
+    let worksDropdownContent = document.getElementsByClassName("works__dropdown-content")[0];
 
     // Handle clicks directly on the Works button, open / collapse the dropdown
     worksToggle.addEventListener("click", function (event) {
@@ -48,14 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // on click listeners to handle "Contact" dropdown menu clicks
-    var contactButton = document.getElementsByClassName("contact__dropdown-btn")[0];
-    var contactDropdownContent = document.getElementsByClassName("contact__dropdown-content")[0];
+    let contactButton = document.getElementsByClassName("contact__dropdown-btn")[0];
+    let contactDropdownContent = document.getElementsByClassName("contact__dropdown-content")[0];
 
-    // Handle clicks directly on the Works button, open / collapse the dropdown
+    // Handle clicks directly on the Contact button, open / collapse the dropdown
     contactButton.addEventListener("click", function (event) {
         contactDropdownContent.style.display = contactDropdownContent.style.display === "block" ? "none" : "block";
-        contactButton.style.borderBottom = contactDropdownContent.style.borderRadius === "1px" ? "0px" : "1px";
-        contactButton.style.borderRadius = contactDropdownContent.style.borderRadius === "20px" ? "20px 20px 0px 0px" : "20px";
+        contactButton.style.borderBottomWidth = contactButton.style.borderBottomWidth === "" ? "0px" : ""; // "" because we're overriding css style with an inline style, in css it does have a value, but code must care about inline style
+        contactButton.style.borderRadius = contactButton.style.borderRadius === "" ? "20px 20px 0px 0px" : "";
         event.stopPropagation();
     });
 
