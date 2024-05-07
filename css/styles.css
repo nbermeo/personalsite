@@ -27,16 +27,25 @@ body {
     color: #1c1f33;
 }
 
+/* All <body class="project"/> on all project pages */
+body.project section,
+.project__column {
+    padding: 50px 100px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
 h1 {
     font-weight: 700;
-    font-size: 7.5rem;
+    font-size: 5rem;
     line-height: 1;
     color: #af42ae;
 }
 
 h2 {
     font-weight: 600;
-    font-size: 6rem;
+    font-size: 4rem;
     line-height: 1.2;
     text-align: center;
     color: #af42ae;
@@ -121,7 +130,7 @@ body .header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 40px;
+    column-gap: 20px;
     font-size: 1rem;
 
     padding: 10px;
@@ -246,9 +255,13 @@ body .header__about {
 
 /* index.js - Homepage - BEGIN */
 
-.intro {
+body.project .intro,
+body .intro {
     display: flex;
-    padding: 100px 100px 100px 100px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 100px;
     gap: 50px;
 }
 
@@ -263,8 +276,12 @@ body .header__about {
 }
 
 .intro__image {
-    max-width: 400px;
-    max-height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    max-width: 300px;
+    width: 40%;
+    border-radius: 20px;
     object-fit: scale-down;
 }
 
@@ -322,6 +339,7 @@ body .header__about {
     max-width: 340px;
     max-height: 241px;
     border-radius: 10px;
+    align-self: center;
 }
 
 .contact {
@@ -403,10 +421,6 @@ body .contact__linkedin-btn {
     gap: 25px;
 }
 
-.values__text {
-    font-size: 1.25rem;
-}
-
 .testimonials {
     display: flex;
     flex-direction: column;
@@ -430,10 +444,6 @@ body .contact__linkedin-btn {
     border-radius: 10px;
 }
 
-.testimonial__text {
-    font-size: 1.25rem;
-}
-
 .testimonial__author {
     font-weight: 600;
     color: #000000;
@@ -443,25 +453,7 @@ body .contact__linkedin-btn {
 
 /* <project>.js - Begin */
 
-/* All <h2> on all project pages */
-.project__title {
-    font-weight: 600;
-    font-size: 3.75rem;
-    line-height: 1;
-    color: #af42ae;
-    text-align: center;
-}
-
-/* All <body class="project"/> on all project pages */
-body.project section,
-.project__column {
-    padding: 100px 100px 100px 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.project__row {
+.project__group {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -485,10 +477,19 @@ body.project ul {
 }
 
 .project-brief__role {
-    display: table;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
     align-items: center;
-    width: 100%;
-    border-spacing: 20px;
+}
+
+.project-brief__role-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
 }
 
 .project-brief__title {
@@ -498,22 +499,22 @@ body.project ul {
     color: #af42ae;
 }
 
-.project-brief__role-item {
-    text-align: center;
-    border: 1px solid #e8dbc5;
-}
-
-.project-brief__image-description {
-    font-size: 1.25rem;
-}
-
 .project-metrics__overview {
-    display: table;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     border-spacing: 20px;
     background: #1c1f33;
     padding: 80px 100px;
     gap: 33px;
+}
+
+.project-metrics__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .project-metrics__title {
@@ -525,27 +526,26 @@ body.project ul {
 
 .project-metrics__description {
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     vertical-align: top;
     color: #fff4e9;
 }
 
-.problem__summary {
-    display: table;
-    border-spacing: 10px;
+.problem__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
 }
 
-.problem__row td {
+.problem__item {
     font-size: 1rem;
-
     border: 1px solid #e8dbc5;
     border-radius: 10px;
     box-sizing: border-box;
     text-align: center;
-
     padding: 25px 50px;
-    gap: 10px;
 }
 
 .hero__image {
@@ -654,3 +654,310 @@ body .footer__email:hover,
 }
 
 /* actions - end */
+
+/* @media queries */
+
+@media screen and (max-width: 1200px) {
+    body .header {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .intro__image {
+        display: flex;
+        height: auto;
+        width: 500px;
+        border-radius: 20px;
+    }
+
+    body .intro__home {
+        align-items: center;
+        flex-direction: column;
+        padding: 100px 30px 30px 30px;
+        gap: 50px;
+    }
+
+    .intro__heading {
+        width: 100%;
+    }
+
+    .intro__text {
+        font-weight: 500;
+        font-size: 1.25rem;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    body {
+        background: #fff4e9;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #1c1f33;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 3.25rem;
+        line-height: 1;
+        color: #af42ae;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 1.2;
+        text-align: center;
+        color: #af42ae;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 2.75rem;
+        line-height: 1.2;
+        text-align: center;
+        color: #af42ae;
+    }
+
+    /* All <body class="project"/> on all project pages */
+    body.project section,
+    .project__column {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    body.project .intro {
+        display: flex;
+        flex-direction: row;
+        padding: 100px 30px 30px 30px;
+        gap: 50px;
+    }
+
+    body .header {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .header__nav {
+        display: flex;
+        opacity: 0%; /* TODO: REMOVE, TEMP HIDDEN TO FIX REST OF SITE */
+        flex-direction: column;
+        margin-top: auto;
+        margin-bottom: auto;
+        border: 1px solid #1c1f33;
+        border-radius: 20px;
+        background: #fff4e9;
+        row-gap: 10px;
+        top: 100%;
+        /*position: relative; */
+        z-index: 1;
+
+        position: absolute;
+        width: 100vh;
+        min-width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+
+    .contact__dropdown-btn .resume__btn {
+        width: 100%;
+    }
+
+    .header__nav input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+
+        cursor: pointer;
+
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    .header__nav span {
+        display: block;
+        width: 27.5px;
+        height: 1.39px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #1c1f33;
+        border: 1px solid #1c1f33;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    }
+
+    .header__nav span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    .header__nav span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /* 
+     * Transform all the slices of hamburger
+     * into a crossmark.
+     */
+    .header__nav input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+     * But let's hide the middle one.
+     */
+    .header__nav input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+     * Ohyeah and the last one should go the other direction
+     */
+    .header__nav input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+     * Make this absolute positioned
+     * at the top left of the screen
+     */
+    #menu {
+        position: absolute;
+        width: 300px;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    /*
+     * And let's slide it in from the left
+     */
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+    /* index, works, about, contact pages */
+    .recent-works {
+        padding: 30px;
+    }
+
+    .recent-works__item {
+        flex-direction: column;
+        padding: 30px 30px;
+        row-gap: 20px;
+    }
+
+    .reverse-order-mobile {
+        order: -1;
+    }
+
+    .contact__btns {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .values {
+        padding: 30px 30px;
+    }
+
+    .testimonials {
+        padding: 40px 30px;
+    }
+
+    .testimonial {
+        padding: 30px 30px;
+    }
+
+    .project__group,
+    .project-metrics__overview,
+    .project-brief__role,
+    .problem__group {
+        flex-direction: column;
+    }
+
+    .project-brief__heading,
+    .project-brief__role,
+    .project-brief__role-item {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .project-brief__heading {
+        font-size: 1.125rem;
+    }
+
+    .project-metrics__title {
+        font-size: 1.8rem;
+    }
+
+    .project-metrics__description {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile-size only */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 1;
+        color: #af42ae;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 2.25rem;
+        line-height: 1.2;
+        text-align: center;
+        color: #af42ae;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 1.2;
+        text-align: center;
+        color: #af42ae;
+    }
+
+    body .header .header__name {
+        display: none;
+    }
+}

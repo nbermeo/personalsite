@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img class="logo" src="./images/logo.png" alt="logo" />
                 <div class="header__name">Nicole Bermeo</div>
             </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="header__nav">
                 <button class="works__dropdown-btn"><svg class="svg-hover-purple-stroke" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.2" d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" fill="#1C1F33"/>
@@ -38,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <a class="contact__list-item-last" target="_blank" href="https://www.linkedin.com/in/nbermeo/">LinkedIn</a>
                     </div>
                 </div>
-                <a class="button__purple" href="./documents/resume.pdf" target="_blank"><img src="./images/scroll.svg" alt="scroll" />View Resume</a>
+                <a class="button__purple resume__btn" href="./documents/resume.pdf" target="_blank"><img src="./images/scroll.svg" alt="scroll" />View Resume</a>
             </nav>
         </header>`;
 

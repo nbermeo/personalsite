@@ -23,62 +23,63 @@
             </section>
             <img src="./images/subtrac-banner.png" alt="subtrac" class="project__image" />
             <section>
-                <h2 class="project__title">Project Brief</h2>
+                <h2 class="project-brief__heading">Project Brief</h2>
                 <p class="project__text-small">Subtract, a budget and subscription tracker that will give you a “big-picture” view of your expenses and warn you of any upcoming payments. Email searches of subscriptions make it easy for users to find all their subscriptions and prevent any forgotten accounts.</p>
 
-                <!-- TODO: Add thin line between each of the columns here -->
-                <table class="project-brief__role">
-                    <tr class="project-brief__title project-brief__role-item">
-                        <td>Project Role</td>
-                        <td>Timeline</td>
-                        <td>Platform</td>
-                    </tr>
-                    <tr class="project__text-small project-brief__role-item">
-                        <td>UX Designer</td>
-                        <td>December 2023 - January 2023</td>
-                        <td>Mobile application</td>
-                    </tr>
-                </table>
+                <div class="project-brief__role">
+                    <div class="project-brief__role-item">
+                        <div class="project-brief__title">Project Role</div>
+                        <div class="project__text-small">UX Designer</div>
+                    </div>
+                    <div class="project-brief__role-item">
+                        <div class="project-brief__title">Timeline</div>
+                        <div class="project__text-small">December 2023 - January 2023</div>
+                    </div>
+                    <div class="project-brief__role-item">
+                        <div class="project-brief__title">Platform</div>
+                        <div class="project__text-small">Mobile application</div>
+                    </div>
+                </div>
                 <img src="./images/subtrac-mockups-mobile.png" alt="subtrac-brief-image" />
                 <p class="project-brief__image-description">Here we have the final frames of the homepage showing graphs of spending and an option to add subscriptions.</p>
             </section>
-            <table class="project-metrics__overview">
-                <tr class="project-metrics__title">
-                    <td>Project Goals</td>
-                    <td>Key Challenges</td>
-                    <td>Target Users</td>
-                </tr>
-                <tr class="project-metrics__description">
-                    <td>Assist users in tracking their subscriptions and visualize their spending</td>
-                    <td>How can I help users visualize their spending? Is there an easier way to find subscriptions with minimal input?</td>
-                    <td>Young to middle aged adults who have multiple subscription services.</td>
-                </tr>
-            </table>
+            <div class="project-metrics__overview">
+                <div class="project-metrics__item">
+                    <div class="project-metrics__title">Project Goals</div>
+                    <div class="project-metrics__description">Assist users in tracking their subscriptions and visualize their spending</div>
+                </div>
+                <div class="project-metrics__item">
+                    <div class="project-metrics__title">Key Challenges</div>
+                    <div class="project-metrics__description">How can I help users visualize their spending? Is there an easier way to find subscriptions with minimal input?</div>
+                </div>
+                <div class="project-metrics__item">
+                    <div class="project-metrics__title">Target Users</div>
+                    <div class="project-metrics__description">Young to middle aged adults who have multiple subscription services.</div>
+                </div>
+            </div>
             <section>
-                <h2 class="project__title">Introducing the Hero</h2>
-                <div class="project__row">
+                <h2>Introducing the Hero</h2>
+                <div class="project__group">
                     <p>Meet Adam, a 32 year old full-time professional, married to his wife Imani, for 7 years. They have two young children together. He has several subscriptions that he manages for him and his family including video streaming, meal delivery, software, and gym memberships. He would love a way to track all his subscriptions and keep track of his spending.</p>
                     <img src="./images/hero-adam.png" alt="hero" class="hero__image" />
                 </div>
             </section>
             <section>
-                <h2 class="project__title">Understanding the problem</h2>
-                <table class="problem__summary">
-                    <tr class="problem__row">
-                        <td>How can we make sure Adam doesn't forget all his subscriptions?</td>
-                        <td>Adding every single subscription to track.</td>
-                        <td>How do we visualize his spending to make it easier to understand?</td>
-                    </tr>
-                </table>
+                <h2>Understanding the problem</h2>
+                <div class="problem__group">
+                    <div class="problem__item">How can we make sure Adam doesn't forget all his subscriptions?</div>
+                    <div class="problem__item">Adding every single subscription to track.</div>
+                    <div class="problem__item">How do we visualize his spending to make it easier to understand?</div>
+                </div>
             </section>
             <section class="research">
-                <h2 class="project__title">Research and Discovery</h2>
+                <h2>Research and Discovery</h2>
                 <img src="./images/subtrac-survey.png" alt="survey" />
                 <p class="research__text">A quick Google Survey that I sent out to a few friends to gain some insights on how I can design a helpful subscription tracking application.</p>
             </section>
             <section>
-                <h2 class="project__title">Ideating & Brainstorming</h2>
-                <div class="project__row">
+                <h2>Ideating & Brainstorming</h2>
+                <div class="project__group">
                     <img src="./images/subtrac-sketches.png" alt="subtrac-sketches" class="row-half-size" />
                     <ul>
                         <li>Figure A: Adam wants to be able to see his budget and funds at a glance. So I created sketches of what kind of graphs should be included in the home screen.</li>
@@ -88,8 +89,8 @@
                 </div>
             </section>
             <section>
-                <h2 class="project__title">Wireframing</h2>
-                <div class="project__row">
+                <h2>Wireframing</h2>
+                <div class="project__group">
                     <ul>
                         <li>Figure A: Home screen showing the upcoming payments, graphs, and lists of subscriptions.</li>
                         <li>Figure B: I originally created a pie, line, and bell graph.</li>
@@ -99,18 +100,18 @@
                 </div>
             </section>
             <section>
-                <h2 class="project__title">Prototyping</h2>
-                <div class="project__row">
+                <h2>Prototyping</h2>
+                <div class="project__group">
                     <img class="phone-radius" loading="lazy" src="./images/subtrac-prototype-1.gif" alt="subtrac-proto" />
                     <p>The homepage of Subtrac shows upcoming payments and graphs. After researching, I decided to change the bell curve graph with bar graphs, since bell-curve graphs is helpful for data like testing scores. Also, bar graphs are much more simple to show Adam how much he have been spending.</p>
                 </div>
-                <div class="project__row">
+                <div class="project__group">
                     <p>I also made an easy way for Adam to add his subscriptions from just providing an email. All he would have to do is press the plus icon and log in. I got this idea from using Mint for my own personal use.</p>
                     <img class="phone-radius" loading="lazy" src="./images/subtrac-prototype-2.gif" alt="subtrac-proto" />
                 </div>
             </section>
             <section>
-                <h2 class="project__title">Conclusion</h2>
+                <h2>Conclusion</h2>
                 <p>By just working on this by myself, I was able to get some very helpful user feedback and ideate based on a simple Google survey. If given a chance, I would love to be able to add the features of Subtrac to an established application with a dedicated team of experienced designers. I had a solid idea of how to help people like Adam, but would love to be able to seek feedback from designers and test in different stages.</p>
             </section>
         </main>
