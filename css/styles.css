@@ -162,10 +162,6 @@ body .header__nav {
     transition: 0.1s ease-out;
 }
 
-.works__dropdown-content a:hover {
-    color: #af42ae;
-}
-
 /* Contact dropdown button and content */
 
 .header__contact {
@@ -181,6 +177,7 @@ body .header__nav {
     justify-content: center;
     align-items: center;
     padding: 16px 30px;
+    width: 182px;
     column-gap: 8px;
 
     text-align: center;
@@ -191,36 +188,37 @@ body .header__nav {
 }
 
 .contact__dropdown-content {
-    display: none;
+    display: block;
+    width: 182px;
     position: absolute;
-    top: 70%;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    top: 75%;
     z-index: 1;
-    opacity: 100%;
     background: #fff4e9;
-    padding: 5px;
-    padding-bottom: 10px;
-    gap: 20px;
     border: 1px solid #af42ae;
     border-top: 0px;
     border-radius: 0px 0px 20px 20px;
-    transition: all 3s ease-in-out;
-    -webkit-transition: all 0.9s ease;
-    -moz-transition: all 0.9s ease;
-    -o-transition: all 0.9s ease;
-    -ms-transition: all 0.9s ease;
-    transition: all 0.9s ease;
+    transition: all 0.1s ease-in-out;
 }
 
 .contact__dropdown-content a {
-    color: #af42ae;
-    padding: 12px 16px;
     display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    color: #af42ae;
     text-decoration: none;
-    transition: 0.1s ease-out;
+    transition: all 0.1s ease-in-out;
 }
 
-.contact__dropdown-link a:hover {
-    color: black;
+.contact__dropdown-content a:hover {
+    background: #e6dcd2;
+}
+
+.contact__list-item-last {
+    border-radius: 0px 0px 20px 20px;
 }
 
 body .header__about {
@@ -599,8 +597,29 @@ body.project ul {
 /* footer.js - end */
 
 /* actions - on:hover , etc */
-body .works__dropdown-link:hover {
+body .works__dropdown-btn:hover,
+.works__dropdown-content a:hover,
+.header__about:hover {
     color: #af42ae;
+    stroke: #af42ae;
+}
+
+.works__dropdown-btn > .svg-hover-purple-stroke,
+.header__about > svg .svg-hover-purple-stroke {
+    stroke: #1c1f33;
+}
+
+.works__dropdown-btn:hover > .svg-hover-purple-stroke,
+.header__about:hover > svg .svg-hover-purple-stroke {
+    stroke: #af42ae;
+}
+
+.works__dropdown-btn > .svg-hover-purple-fill > path {
+    fill: #1c1f33;
+}
+
+.works__dropdown-btn:hover > .svg-hover-purple-fill > path {
+    fill: #af42ae;
 }
 
 body .contact__email-btn:hover,
@@ -611,6 +630,7 @@ body .contact__email-btn:hover,
 body .contact__linkedin-btn:hover,
 .contact__dropdown-btn:hover {
     background: #e6dcd2;
+    transition: 0 0.1s ease-out;
 }
 
 body .footer__email:hover,
