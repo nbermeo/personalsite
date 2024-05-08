@@ -340,6 +340,13 @@ body.project .intro {
 }
 
 .recent-works__img {
+    /* TODO: get this to work, image is too big on desktop, and overflows on mobile otherwise
+    display: flex;
+    flex-grow: 0;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    */
     max-width: 340px;
     max-height: 241px;
     border-radius: 10px;
@@ -584,6 +591,12 @@ h2.project-brief__heading {
     border-radius: 50px;
 }
 
+/* TODO: Fix this, paragraph in the prototypes on desktop is too wide, same on tablet, mobile is fine
+.prototyping {
+    padding-left: 200px;
+    padding-right: 200px;
+}*/
+
 /* <project>.js - End */
 
 /* footer.js - begin */
@@ -711,6 +724,10 @@ body .footer__email:hover,
         font-size: 1.25rem;
         display: flex;
     }
+
+    .footer {
+        padding: 24px 24px;
+    }
 }
 
 @media screen and (max-width: 1040px) {
@@ -795,8 +812,14 @@ body .footer__email:hover,
         width: 100%;
     }
 
-    .contact__dropdown-btn,
-    body.resume__btn {
+    .contact__dropdown-btn {
+        max-width: 100%;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    a.button__purple.resume__btn {
+        justify-content: center;
         max-width: 100%;
         width: 100%;
         flex-grow: 1;
@@ -886,9 +909,8 @@ body .footer__email:hover,
 
     .x:nth-of-type(1) {
         transition: all 100ms ease-in-out;
-        transform: rotate(45deg);
-        transform-origin: top left;
-        width: 24px;
+        transform: rotate(45deg) translateY(10px);
+        /*transform-origin: top left;*/
     }
 
     .x:nth-of-type(2) {
@@ -899,43 +921,8 @@ body .footer__email:hover,
 
     .x:nth-of-type(3) {
         transition: all 100ms ease-in-out;
-        transform: rotate(-45deg);
-        transform-origin: bottom left;
-        width: 24px;
-    }
-
-    /*
-     * Make this absolute positioned
-     * at the top left of the screen
-     */
-    #menu {
-        position: absolute;
-        width: 300px;
-        margin: -100px 0 0 -50px;
-        padding: 50px;
-        padding-top: 125px;
-
-        background: #ededed;
-        list-style-type: none;
-        -webkit-font-smoothing: antialiased;
-        /* to stop flickering of text in safari */
-
-        transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    }
-
-    #menu li {
-        padding: 10px 0;
-        font-size: 22px;
-    }
-
-    /*
-     * And let's slide it in from the left
-     */
-    #menuToggle input:checked ~ ul {
-        transform: none;
+        transform: rotate(-45deg) translateY(-10px);
+        /*transform-origin: bottom left;*/
     }
 
     /* index, works, about, contact pages */
@@ -947,6 +934,15 @@ body .footer__email:hover,
         flex-direction: column;
         padding: 30px 30px;
         row-gap: 20px;
+    }
+
+    .recent-works__img {
+        /* TODO: get this to work, image is too big on desktop, and overflows on mobile otherwise */
+        display: flex;
+        flex-grow: 1;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
     }
 
     .reverse-order-mobile {
@@ -1009,8 +1005,13 @@ body .footer__email:hover,
         max-width: 100%;
     }
 
+    .phone-radius {
+        border-radius: 20px;
+    }
+
     .phone-proto {
-        /* TODO: Fix this, phone proto is too big on tablet */
+        max-width: 50%;
+        align-self: center;
     }
 }
 
@@ -1039,7 +1040,8 @@ body .footer__email:hover,
         color: #af42ae;
     }
 
-    body .header .header__name {
+    body .header .header__name,
+    body .footer .footer__name {
         font-size: 1.5rem;
     }
 }

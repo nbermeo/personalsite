@@ -76,14 +76,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Collapse "Works" dropdown content and "Contact" dropdown content
     // whenever a click is made to the page
     document.addEventListener("click", function (event) {
-        collapseWorksDropdown();
-        collapseContactDropdown();
-        closeHamburger();
+        closeAllDropdowns();
         event.stopPropagation();
     });
 
     let navToggle = document.getElementsByClassName("hamburger")[0];
-    let bars = document.querySelectorAll("bar");
+    let bars = document.querySelectorAll(".bar");
     let navDropdown = document.getElementsByClassName("header__nav")[0];
     let headerName = document.getElementsByClassName("header__name")[0];
 
@@ -94,13 +92,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function toggleHamburger() {
         bars.forEach((bar) => bar.classList.toggle("x"));
+        collapseWorksDropdown();
+        collapseContactDropdown();
         navDropdown.style.display = navDropdown.style.display === "" ? "flex" : "";
         headerName.style.display = headerName.style.display === "" ? "none" : "";
     }
 
+    function closeAllDropdowns() {
+        collapseWorksDropdown();
+        collapseContactDropdown();
+        closeHamburger();
+    }
+
     function closeHamburger() {
         bars.forEach((bar) => bar.classList.remove("x"));
-        navDropdown.style.opacity = "";
+        navDropdown.style.display = "";
+        headerName.style.display = "none";
     }
 
     function collapseWorksDropdown() {
