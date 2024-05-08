@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function closeHamburger() {
         bars.forEach((bar) => bar.classList.remove("x"));
         navDropdown.style.display = "";
-        headerName.style.display = "none";
+        headerName.style.display = "";
     }
 
     function collapseWorksDropdown() {
