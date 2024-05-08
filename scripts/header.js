@@ -83,8 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     let navToggle = document.getElementsByClassName("hamburger")[0];
-    let bars = document.getElementsByClassName("bar");
+    let bars = document.querySelectorAll("bar");
     let navDropdown = document.getElementsByClassName("header__nav")[0];
+    let headerName = document.getElementsByClassName("header__name")[0];
 
     navToggle.addEventListener("click", function (event) {
         toggleHamburger();
@@ -92,9 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function toggleHamburger() {
-        // TODO: Fix this, bars is a single element since we're not using querySelector
         bars.forEach((bar) => bar.classList.toggle("x"));
-        navDropdown.style.opacity = contactButton.style.borderBottomWidth === "" ? "100%" : "";
+        navDropdown.style.opacity = navDropdown.style.opacity === "" ? "100%" : "";
+        headerName.style.display = headerName.style.display === "" ? "none" : "";
     }
 
     function closeHamburger() {
