@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function toggleHamburger() {
         bars.forEach((bar) => bar.classList.toggle("x"));
-        navDropdown.style.opacity = navDropdown.style.opacity === "" ? "100%" : "";
+        navDropdown.style.display = navDropdown.style.display === "" ? "flex" : "";
         headerName.style.display = headerName.style.display === "" ? "none" : "";
     }
 

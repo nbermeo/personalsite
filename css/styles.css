@@ -768,10 +768,8 @@ body .footer__email:hover,
         padding: 25px;
     }
 
-    .header__nav {
-        opacity: 0%;
-
-        display: flex;
+    body .header__nav {
+        display: none;
         flex-direction: column;
         margin-top: auto;
         margin-bottom: auto;
