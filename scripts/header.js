@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="header__name">Nicole Bermeo</div>
             </a>
             <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
             <nav class="header__nav">
                 <button class="works__dropdown-btn"><svg class="svg-hover-purple-stroke" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,8 +78,29 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function (event) {
         collapseWorksDropdown();
         collapseContactDropdown();
+        closeHamburger();
         event.stopPropagation();
     });
+
+    let navToggle = document.getElementsByClassName("hamburger")[0];
+    let bars = document.getElementsByClassName("bar");
+    let navDropdown = document.getElementsByClassName("header__nav")[0];
+
+    navToggle.addEventListener("click", function (event) {
+        toggleHamburger();
+        event.stopPropagation();
+    });
+
+    function toggleHamburger() {
+        // TODO: Fix this, bars is a single element since we're not using querySelector
+        bars.forEach((bar) => bar.classList.toggle("x"));
+        navDropdown.style.opacity = contactButton.style.borderBottomWidth === "" ? "100%" : "";
+    }
+
+    function closeHamburger() {
+        bars.forEach((bar) => bar.classList.remove("x"));
+        navDropdown.style.opacity = "";
+    }
 
     function collapseWorksDropdown() {
         worksDropdownContent.style.display = "none";
