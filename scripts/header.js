@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     header.outerHTML = `
         <header class="header">
             <a class="brand" href="/">
-                <img class="logo" src="./images/logo.png" alt="logo" />
+                <img class="logo" src="./images/logo.svg" alt="logo" />
                 <div class="header__name">Nicole Bermeo</div>
             </a>
             <button class="hamburger">

@@ -108,6 +108,7 @@ body .header {
 
 body .logo {
     display: flex;
+    width: 32px;
     height: 100%;
 }
 
