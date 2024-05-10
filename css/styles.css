@@ -791,10 +791,11 @@ body .footer__email:hover,
         flex-direction: column;
         margin-top: auto;
         margin-bottom: auto;
+        padding-bottom: 30px;
         border-bottom: 1px solid #1c1f33;
         border-radius: 0px 0px 20px 20px;
         background: #fff4e9;
-        row-gap: 10px;
+        row-gap: 20px;
         top: 95%;
         /*position: relative; */
         z-index: 1;
@@ -1002,16 +1003,27 @@ body .footer__email:hover,
         font-size: 1rem;
     }
 
+    .hero__image {
+        align-self: center;
+        width: 50%;
+        height: auto;
+    }
+
     .row-half-size {
         max-width: 100%;
     }
 
     .phone-radius {
-        border-radius: 20px;
+        border-radius: 30px;
     }
 
     .phone-proto {
-        max-width: 50%;
+        max-width: 70%;
+        align-self: center;
+    }
+
+    .desktop-proto {
+        max-width: 100%;
         align-self: center;
     }
 }
@@ -1044,5 +1056,11 @@ body .footer__email:hover,
     body .header .header__name,
     body .footer .footer__name {
         font-size: 1.5rem;
+    }
+
+    .hero__image {
+        align-self: center;
+        width: 70%;
+        height: auto;
     }
 }
