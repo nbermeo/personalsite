@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <a class="contact__list-item-last" target="_blank" href="https://www.linkedin.com/in/nbermeo/">LinkedIn</a>
                     </div>
                 </div>
-                <a class="button__purple resume__btn" href="./documents/resume.pdf" target="_blank"><img src="./images/scroll.svg" alt="scroll" />View Resume</a>
+                <a class="button__purple resume__btn" href="./documents/Nicole_Bermeo_UXD_resume.pdf" target="_blank"><img src="./images/scroll.svg" alt="scroll" />View Resume</a>
             </nav>
         </header>`;
 
