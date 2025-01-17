@@ -93,7 +93,7 @@ body .button__purple {
 /* header.js (Logo, Name, Navbar) - BEGIN */
 
 body .header {
-    position: fixed;
+    position: relative;
     top: 0;
     z-index: 10;
     display: flex;
@@ -293,7 +293,12 @@ body.project .intro {
 /* index.js - Homgepage - Recent Works - Begin */
 
 .recent-works {
-    background: radial-gradient(73.03% 73.03% at 50% 50%, #af42ae 0%, #a8aec1 0%, #e8dbc5 83%);
+    background: radial-gradient(
+        73.03% 73.03% at 50% 50%,
+        #af42ae 0%,
+        #a8aec1 0%,
+        #e8dbc5 83%
+    );
     padding: 100px 100px 100px 100px;
 }
 
@@ -451,7 +456,12 @@ body .contact__linkedin-btn {
     flex-direction: column;
     padding: 40px 100px;
     gap: 40px;
-    background: radial-gradient(73.03% 73.03% at 50% 50%, #af42ae 0%, #a8aec1 0%, #e8dbc5 83%);
+    background: radial-gradient(
+        73.03% 73.03% at 50% 50%,
+        #af42ae 0%,
+        #a8aec1 0%,
+        #e8dbc5 83%
+    );
 }
 
 .testimonial {
