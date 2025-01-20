@@ -17,6 +17,11 @@ img {
     max-width: 50%;
 }
 
+.row-smaller-size {
+    max-width: 40%;
+    padding-left: 25px;
+}
+
 body {
     background: #fff4e9;
     font-family: "Montserrat";
@@ -481,12 +486,24 @@ body .contact__linkedin-btn {
 .project__group {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    gap: 40px;
+    gap: 120px;
+    flex-grow: 1;
+}
+
+.project__group__bordered {
+    gap: 0px;
 }
 
 .project__group__onethirditem {
+    gap: 0px;
+    padding: 0 60px;
     max-width: 33.33333%;
+    border-right: 1px solid #ccc;
+    padding: 30px;
+}
+
+.project__group__onethirditem:last-child {
+    border-right: none;
 }
 
 body.project ul {
@@ -495,6 +512,10 @@ body.project ul {
     gap: 20px;
     align-self: center;
     list-style-position: inside;
+}
+
+.project-metrics__description .ul__nogap {
+    gap: 0;
 }
 
 .project__text-small {
@@ -540,19 +561,25 @@ h2.project-brief__heading {
 .project-metrics__overview {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     border-spacing: 20px;
     background: #1c1f33;
     padding: 80px 100px;
-    gap: 33px;
 }
 
 .project-metrics__item {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 0px 50px;
+    margin: 50px 0px;
     justify-content: space-evenly;
     align-items: center;
+    border-right: 1px solid #ccc;
+}
+
+.project-metrics__item:last-child {
+    border: none;
 }
 
 .project-metrics__title {
@@ -984,8 +1011,23 @@ body .footer__email:hover,
         flex-direction: column;
     }
 
+    .project-metrics__item {
+        border: none;
+    }
+
     .project__group {
         gap: 20px;
+    }
+
+    .project__group__bordered {
+        gap: 20px;
+    }
+
+    .project__group__onethirditem {
+        gap: 120px;
+        padding: 0px;
+        max-width: 100%;
+        border-right: none;
     }
 
     .project-brief__heading,
@@ -1014,6 +1056,10 @@ body .footer__email:hover,
     }
 
     .row-half-size {
+        max-width: 100%;
+    }
+
+    .row-smaller-size {
         max-width: 100%;
     }
 
