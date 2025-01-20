@@ -293,12 +293,7 @@ body.project .intro {
 /* index.js - Homgepage - Recent Works - Begin */
 
 .recent-works {
-    background: radial-gradient(
-        73.03% 73.03% at 50% 50%,
-        #af42ae 0%,
-        #a8aec1 0%,
-        #e8dbc5 83%
-    );
+    background: radial-gradient(73.03% 73.03% at 50% 50%, #af42ae 0%, #a8aec1 0%, #e8dbc5 83%);
     padding: 100px 100px 100px 100px;
 }
 
@@ -456,12 +451,7 @@ body .contact__linkedin-btn {
     flex-direction: column;
     padding: 40px 100px;
     gap: 40px;
-    background: radial-gradient(
-        73.03% 73.03% at 50% 50%,
-        #af42ae 0%,
-        #a8aec1 0%,
-        #e8dbc5 83%
-    );
+    background: radial-gradient(73.03% 73.03% at 50% 50%, #af42ae 0%, #a8aec1 0%, #e8dbc5 83%);
 }
 
 .testimonial {
@@ -493,6 +483,10 @@ body .contact__linkedin-btn {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 40px;
+}
+
+.project__group__onethirditem {
+    max-width: 33.33333%;
 }
 
 body.project ul {

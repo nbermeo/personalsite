@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 </button>
                 <div class="works__dropdown-content">
+                    <a class="works__dropdown-link" href="./baddiecon.html">BaddieCon 2024</a>
                     <a class="works__dropdown-link" href="./buildathon.html">Buildathon</a>
                     <a class="works__dropdown-link" href="./subtrac.html">Subtrac</a>
                     <a class="works__dropdown-link" href="./prepper.html">Prepper</a>
