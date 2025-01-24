@@ -24,7 +24,7 @@ img {
 
 body {
     background: #fff4e9;
-    font-family: "Montserrat";
+    font-family: "Source Sans 3";
     font-style: normal;
     font-weight: 400;
     font-size: 1.25rem;
@@ -35,7 +35,7 @@ body {
 /* All <body class="project"/> on all project pages */
 body.project section,
 .project__column {
-    padding: 50px 100px 50px 100px;
+    padding: 25px 100px 25px 100px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -46,6 +46,10 @@ h1 {
     font-size: 5rem;
     line-height: 1;
     color: #af42ae;
+}
+
+.h1__projectitem {
+    margin: 0px 0px 10px 0px;
 }
 
 h2 {
@@ -264,14 +268,14 @@ body .intro {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: 100px;
+    padding: 25px 100px 25px 100px;
     gap: 50px;
 }
 
 body.project .intro {
     display: flex;
     align-items: flex-start;
-    padding: 100px;
+    padding: 25px 100px 25px 100px;
     gap: 50px;
 }
 
@@ -298,8 +302,8 @@ body.project .intro {
 /* index.js - Homgepage - Recent Works - Begin */
 
 .recent-works {
-    background: radial-gradient(73.03% 73.03% at 50% 50%, #af42ae 0%, #a8aec1 0%, #e8dbc5 83%);
-    padding: 100px 100px 100px 100px;
+    padding: 25px 100px 100px 100px;
+    gap: 40px;
 }
 
 .recent-works__heading {
@@ -317,8 +321,9 @@ body.project .intro {
 .recent-works__container {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
-    row-gap: 50px;
+    flex-direction: row;
+    padding: 25px;
+    column-gap: 40px;
 }
 
 .recent-works__item {
@@ -326,15 +331,20 @@ body.project .intro {
     justify-content: space-between;
     flex-direction: row;
     align-items: flex-start;
-    padding: 30px 100px;
-    gap: 100px;
+    padding: 30px 30px;
+    max-width: 50%;
 
     background: #fff4e9;
 
-    border-width: 0px 8px 8px 0px;
+    border-width: 1px 8px 8px 1px;
     border-style: solid;
     border-color: #e8dbc5;
     border-radius: 10px;
+}
+
+.recent-works__item:hover {
+    box-shadow: 0 10px 20px rgba(175, 66, 174, 0.5);
+    transform: translateY(-5px);
 }
 
 .recent-works__project {
@@ -524,6 +534,7 @@ body.project ul {
 
 .project__image {
     width: 100%;
+    padding: 25px 100px;
 }
 
 h2.project-brief__heading {
@@ -573,6 +584,8 @@ h2.project-brief__heading {
     gap: 20px;
     padding: 0px 50px;
     margin: 50px 0px;
+    max-width: 33%;
+    min-width: 33%;
     justify-content: space-evenly;
     align-items: center;
     border-right: 1px solid #ccc;
@@ -592,7 +605,7 @@ h2.project-brief__heading {
 .project-metrics__description {
     font-weight: 500;
     font-size: 1.3rem;
-    text-align: center;
+    text-align: left;
     vertical-align: top;
     color: #fff4e9;
 }
@@ -743,7 +756,7 @@ body .footer__email:hover,
     body .intro__home {
         align-items: center;
         flex-direction: column;
-        padding: 100px 30px 30px 30px;
+        padding: 30px 30px 30px 30px;
         gap: 50px;
     }
 
@@ -765,7 +778,7 @@ body .footer__email:hover,
 @media screen and (max-width: 1040px) {
     body {
         background: #fff4e9;
-        font-family: "Montserrat";
+        font-family: "Source Sans 3";
         font-style: normal;
         font-weight: 400;
         font-size: 1rem;
@@ -808,7 +821,7 @@ body .footer__email:hover,
     body.project .intro {
         display: flex;
         flex-direction: row;
-        padding: 100px 30px 30px 30px;
+        padding: 30px 30px 30px 30px;
         gap: 50px;
     }
 
@@ -964,9 +977,12 @@ body .footer__email:hover,
     }
 
     .recent-works__item {
+        /* avt 1-23-25 -- fix this
         flex-direction: column;
         padding: 30px 30px;
         row-gap: 20px;
+        max-width: 50%;
+        */
     }
 
     .recent-works__img {
@@ -1013,6 +1029,8 @@ body .footer__email:hover,
 
     .project-metrics__item {
         border: none;
+        max-width: 100%;
+        min-width: 0%;
     }
 
     .project__group {
@@ -1060,7 +1078,7 @@ body .footer__email:hover,
     }
 
     .row-smaller-size {
-        max-width: 100%;
+        max-width: 50%;
     }
 
     .phone-radius {
@@ -1112,5 +1130,18 @@ body .footer__email:hover,
         align-self: center;
         width: 70%;
         height: auto;
+    }
+
+    .recent-works__container {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .recent-works__item {
+        max-width: 100%;
+    }
+
+    .row-smaller-size {
+        max-width: 75%;
     }
 }
