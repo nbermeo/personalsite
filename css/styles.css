@@ -70,7 +70,6 @@ h3 {
 
 p {
     line-height: 1.5;
-    align-self: center;
 }
 
 table {
@@ -473,7 +472,6 @@ body .contact__linkedin-btn {
 }
 
 .testimonial__text {
-    text-align: left;
     align-self: flex-start;
 }
 
@@ -582,7 +580,6 @@ h2.project-brief__heading {
 }
 
 .project-brief__image-description {
-    text-align: left;
     align-self: flex-start;
 }
 
