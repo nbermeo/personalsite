@@ -293,8 +293,7 @@ body.project .intro {
     display: flex;
     justify-content: space-evenly;
     height: auto;
-    max-width: 300px;
-    width: 40%;
+    max-width: 35%;
     border-radius: 20px;
     object-fit: scale-down;
 }
@@ -443,50 +442,71 @@ body .contact__linkedin-btn {
     align-items: center;
     padding: 80px 100px;
     gap: 40px;
-
-    background: #e8dbc5;
 }
 
 .values__items {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    row-gap: 40px;
+    align-items: left;
+}
+
+.values__items__row {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
 }
 
 .values__item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    max-width: 50%;
+    min-width: 50%;
+    padding: 20px;
+    align-items: left;
     gap: 25px;
+}
+
+.values__item__title {
+    text-align: left;
 }
 
 .testimonials {
     display: flex;
     flex-direction: column;
-    padding: 40px 100px;
-    gap: 40px;
-    background: radial-gradient(73.03% 73.03% at 50% 50%, #af42ae 0%, #a8aec1 0%, #e8dbc5 83%);
+    padding: 20px 100px;
+}
+
+.testimonials__row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
 }
 
 .testimonial {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 100px;
-    gap: 20px;
-
-    background: #fff4e9;
-    border-width: 0px 8px 8px 0px;
-    border-style: solid;
-    border-color: #866386;
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin: 20px;
+    padding: 20px;
+    border: 4px solid #e8dbc5;
     border-radius: 10px;
 }
 
+.testimonial__text {
+    text-align: left;
+    align-self: flex-start;
+}
+
 .testimonial__author {
-    font-weight: 600;
-    color: #000000;
+    text-align: left;
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+.testimonial__author__name {
+    font-size: larger;
 }
 
 /* about.js - End */
@@ -749,7 +769,7 @@ body .footer__email:hover,
     .intro__image {
         display: flex;
         height: auto;
-        width: 500px;
+        max-width: 40%;
         border-radius: 20px;
     }
 
@@ -1020,6 +1040,12 @@ body .footer__email:hover,
         padding: 40px 30px;
     }
 
+    .testimonials__row {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
     .project__group,
     .project-metrics__overview,
     .project-brief__role,
@@ -1143,5 +1169,18 @@ body .footer__email:hover,
 
     .row-smaller-size {
         max-width: 75%;
+    }
+
+    .intro__image {
+        max-width: 75%;
+    }
+
+    .values__items__row {
+        flex-direction: column;
+    }
+
+    .values__item {
+        max-width: 100%;
+        min-width: 0%;
     }
 }
