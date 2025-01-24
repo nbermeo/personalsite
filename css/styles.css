@@ -283,26 +283,22 @@ body.project .intro {
     width: 60%;
 }
 
+.home__heading {
+    padding: 0px 80px;
+}
+
 .intro__text {
     font-weight: 500;
     font-size: 1.875rem;
     display: flex;
 }
 
-.intro__image {
-    display: flex;
-    justify-content: space-evenly;
-    height: auto;
-    max-width: 35%;
-    border-radius: 20px;
-    object-fit: scale-down;
-}
-
 /* index.js - Homgepage - Recent Works - Begin */
 
 .recent-works {
-    padding: 25px 100px 100px 100px;
-    gap: 40px;
+    padding: 25px 100px 25px 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .recent-works__heading {
@@ -317,24 +313,18 @@ body.project .intro {
     font-size: 1.25rem;
 }
 
-.recent-works__container {
+.recent-works__row {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
-    padding: 25px;
-    column-gap: 40px;
 }
 
 .recent-works__item {
     display: flex;
-    justify-content: space-between;
+    flex-grow: 1;
     flex-direction: row;
-    align-items: flex-start;
-    padding: 30px 30px;
-    max-width: 50%;
-
+    margin: 20px;
+    padding: 30px;
     background: #fff4e9;
-
     border-width: 1px 8px 8px 1px;
     border-style: solid;
     border-color: #e8dbc5;
@@ -351,38 +341,18 @@ body.project .intro {
     flex: 1;
     justify-content: space-between;
     flex-direction: column;
-    row-gap: 50px;
+    row-gap: 20px;
 }
 
 .recent-works__img {
-    /* TODO: get this to work, image is too big on desktop, and overflows on mobile otherwise
-    display: flex;
-    flex-grow: 0;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-    */
-    max-width: 340px;
-    max-height: 241px;
-    border-radius: 10px;
     align-self: center;
-}
-
-/* Looks better on mobile but is broken on desktop, img overflows, TODO */
-/*
-.recent-works__img {
-    display: flex;
-    flex: 1;
-    min-height: 0;
+    padding: 15px;
     max-width: 100%;
-    max-height: 100%;
     border-radius: 10px;
-    align-self: center;
 }
-*/
 
 .contact {
-    padding: 100px 100px 100px 100px;
+    padding: 100px 100px 25px 100px;
     display: flex;
     flex-direction: column;
     row-gap: 50px;
@@ -436,6 +406,15 @@ body .contact__linkedin-btn {
 
 /* about.js - Begin */
 
+.about__image {
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    max-width: 35%;
+    border-radius: 20px;
+    object-fit: scale-down;
+}
+
 .values {
     display: flex;
     flex-direction: column;
@@ -459,8 +438,7 @@ body .contact__linkedin-btn {
 .values__item {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
-    min-width: 50%;
+    flex-basis: 100%;
     padding: 20px;
     align-items: left;
     gap: 25px;
@@ -561,17 +539,35 @@ h2.project-brief__heading {
     text-align: left;
 }
 
-.project-brief__role {
+.project-brief__container {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
+}
+
+.project-brief__description {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ccc;
+    gap: 20px;
+}
+
+.project-brief__item {
+    flex-basis: 100%;
+    padding: 40px;
+}
+
+.project-brief__role {
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     gap: 20px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .project-brief__role-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     gap: 20px;
     align-items: center;
@@ -580,7 +576,8 @@ h2.project-brief__heading {
 .project-brief__title {
     font-weight: 600;
     font-size: 18px;
-    text-align: center;
+    width: 110px;
+    text-align: left;
     color: #af42ae;
 }
 
@@ -766,13 +763,6 @@ body .footer__email:hover,
         padding-right: 50px;
     }
 
-    .intro__image {
-        display: flex;
-        height: auto;
-        max-width: 40%;
-        border-radius: 20px;
-    }
-
     body .intro__home {
         align-items: center;
         flex-direction: column;
@@ -845,6 +835,25 @@ body .footer__email:hover,
         gap: 50px;
     }
 
+    body .intro__home {
+        align-items: center;
+        padding: 30px 30px 30px 30px;
+        gap: 50px;
+    }
+
+    .intro__heading {
+        width: 100%;
+    }
+
+    .home__heading {
+        padding: 0px 25px;
+    }
+
+    .intro__text {
+        font-weight: 500;
+        font-size: 1.25rem;
+        display: flex;
+    }
     body .header {
         height: 75px;
         padding: 25px;
@@ -993,25 +1002,16 @@ body .footer__email:hover,
 
     /* index, works, about, contact pages */
     .recent-works {
-        padding: 30px;
-    }
-
-    .recent-works__item {
-        /* avt 1-23-25 -- fix this
-        flex-direction: column;
-        padding: 30px 30px;
-        row-gap: 20px;
-        max-width: 50%;
-        */
+        padding: 25px 100px;
     }
 
     .recent-works__img {
-        /* TODO: get this to work, image is too big on desktop, and overflows on mobile otherwise */
-        display: flex;
-        flex-grow: 1;
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 10px;
+        min-width: 250px;
+        max-width: 50%;
+    }
+
+    .recent-works__row {
+        flex-direction: column;
     }
 
     .reverse-order-mobile {
@@ -1120,6 +1120,20 @@ body .footer__email:hover,
         max-width: 100%;
         align-self: center;
     }
+
+    .project-brief__container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .project-brief__item {
+        padding: 15px;
+    }
+
+    .project-brief__description {
+        border-right: none;
+    }
 }
 
 /* Mobile-size only */
@@ -1158,20 +1172,15 @@ body .footer__email:hover,
         height: auto;
     }
 
-    .recent-works__container {
-        flex-direction: column;
-        row-gap: 40px;
+    .recent-works {
+        padding: 25px;
     }
 
-    .recent-works__item {
+    .recent-works__img {
         max-width: 100%;
     }
 
     .row-smaller-size {
-        max-width: 75%;
-    }
-
-    .intro__image {
         max-width: 75%;
     }
 
@@ -1182,5 +1191,13 @@ body .footer__email:hover,
     .values__item {
         max-width: 100%;
         min-width: 0%;
+    }
+
+    body .about__heading {
+        flex-direction: column;
+    }
+
+    .about__image {
+        max-width: 60%;
     }
 }
