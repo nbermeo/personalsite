@@ -492,6 +492,7 @@ body .contact__linkedin-btn {
 .project__group {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 120px;
     flex-grow: 1;
 }
