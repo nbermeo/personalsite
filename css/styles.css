@@ -832,7 +832,7 @@ body .footer__email:hover,
 
     body.project .intro {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding: 30px 30px 30px 30px;
         gap: 50px;
     }
