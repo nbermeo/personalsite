@@ -144,9 +144,9 @@ body .header__nav {
     padding: 10px;
 }
 
-/*  "Works" dropdown */
+/*  "Work" dropdown */
 
-.works__dropdown-btn {
+.work__dropdown-btn {
     display: flex;
     position: relative;
     flex-direction: row;
@@ -161,7 +161,7 @@ body .header__nav {
     transition: 0.1s ease-out;
 }
 
-.works__dropdown-content {
+.work__dropdown-content {
     display: none;
     position: absolute;
     top: 80%;
@@ -176,7 +176,7 @@ body .header__nav {
     border-color: #000000;
 }
 
-.works__dropdown-content a {
+.work__dropdown-content a {
     color: black;
     padding: 12px 16px;
     display: block;
@@ -244,7 +244,6 @@ body .header__nav {
 body .header__about {
     display: flex;
     column-gap: 8px;
-    justify-content: space-between;
     align-items: center;
     padding: 0px;
 
@@ -293,13 +292,13 @@ body.project .intro {
 
 /* index.js - Homgepage - Recent Works - Begin */
 
-.recent-works {
+.recent-work {
     padding: 25px 100px 25px 100px;
     display: flex;
     flex-direction: column;
 }
 
-.recent-works__heading {
+.recent-work__heading {
     font-weight: 500;
     font-size: 1.875rem;
     line-height: 1.25;
@@ -307,16 +306,16 @@ body.project .intro {
     color: #1c1f33;
 }
 
-.recent-works__text {
+.recent-work__text {
     font-size: 1.25rem;
 }
 
-.recent-works__row {
+.recent-work__row {
     display: flex;
     flex-direction: row;
 }
 
-.recent-works__item {
+.recent-work__item {
     display: flex;
     flex-grow: 1;
     flex-direction: row;
@@ -329,12 +328,12 @@ body.project .intro {
     border-radius: 10px;
 }
 
-.recent-works__item:hover {
+.recent-work__item:hover {
     box-shadow: 0 10px 20px rgba(175, 66, 174, 0.5);
     transform: translateY(-5px);
 }
 
-.recent-works__project {
+.recent-work__project {
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -342,7 +341,7 @@ body.project .intro {
     row-gap: 20px;
 }
 
-.recent-works__img {
+.recent-work__img {
     align-self: center;
     padding: 15px;
     max-width: 100%;
@@ -706,28 +705,28 @@ h2.project-brief__heading {
 /* footer.js - end */
 
 /* actions - on:hover , etc */
-body .works__dropdown-btn:hover,
-.works__dropdown-content a:hover,
+body .work__dropdown-btn:hover,
+.work__dropdown-content a:hover,
 .header__about:hover {
     color: #af42ae;
     stroke: #af42ae;
 }
 
-.works__dropdown-btn > .svg-hover-purple-stroke,
+.work__dropdown-btn > .svg-hover-purple-stroke,
 .header__about > svg .svg-hover-purple-stroke {
     stroke: #1c1f33;
 }
 
-.works__dropdown-btn:hover > .svg-hover-purple-stroke,
+.work__dropdown-btn:hover > .svg-hover-purple-stroke,
 .header__about:hover > svg .svg-hover-purple-stroke {
     stroke: #af42ae;
 }
 
-.works__dropdown-btn > .svg-hover-purple-fill > path {
+.work__dropdown-btn > .svg-hover-purple-fill > path {
     fill: #1c1f33;
 }
 
-.works__dropdown-btn:hover > .svg-hover-purple-fill > path {
+.work__dropdown-btn:hover > .svg-hover-purple-fill > path {
     fill: #af42ae;
 }
 
@@ -902,7 +901,7 @@ body .footer__email:hover,
         flex-grow: 1;
     }
 
-    .works__dropdown-content {
+    .work__dropdown-content {
         display: none;
         position: relative;
         z-index: 1;
@@ -917,7 +916,7 @@ body .footer__email:hover,
         border-color: #000000;
     }
 
-    .works__dropdown-link {
+    .work__dropdown-link {
         text-align: center;
     }
 
@@ -1003,16 +1002,16 @@ body .footer__email:hover,
     }
 
     /* index, works, about, contact pages */
-    .recent-works {
+    .recent-work {
         padding: 25px 100px;
     }
 
-    .recent-works__img {
+    .recent-work__img {
         min-width: 250px;
         max-width: 50%;
     }
 
-    .recent-works__row {
+    .recent-work__row {
         flex-direction: column;
     }
 
@@ -1170,11 +1169,11 @@ body .footer__email:hover,
         height: auto;
     }
 
-    .recent-works {
+    .recent-work {
         padding: 25px;
     }
 
-    .recent-works__img {
+    .recent-work__img {
         max-width: 100%;
     }
 

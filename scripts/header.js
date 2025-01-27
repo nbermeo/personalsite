@@ -14,20 +14,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 <span class="bar"></span>
             </button>
             <nav class="header__nav">
-                <button class="works__dropdown-btn"><svg class="svg-hover-purple-stroke" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="work__dropdown-btn"><svg class="svg-hover-purple-stroke" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.2" d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" fill="#1C1F33"/>
                 <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M6.875 8.125V5.625C6.875 4.7962 7.20424 4.00134 7.79029 3.41529C8.37634 2.82924 9.1712 2.5 10 2.5C10.8288 2.5 11.6237 2.82924 12.2097 3.41529C12.7958 4.00134 13.125 4.7962 13.125 5.625V8.125" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>Works<svg class="svg-hover-purple-fill" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </svg>Work<svg class="svg-hover-purple-fill" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.8135 7.99625L10.4502 13.8289C10.3911 13.8832 10.3209 13.9262 10.2437 13.9555C10.1664 13.9849 10.0836 14 10 14C9.91638 14 9.83357 13.9849 9.75632 13.9555C9.67907 13.9262 9.60889 13.8832 9.54979 13.8289L3.18648 7.99625C3.06708 7.88681 3 7.73837 3 7.58359C3 7.42881 3.06708 7.28037 3.18648 7.17093C3.30588 7.06149 3.46783 7 3.63669 7C3.80554 7 3.96749 7.06149 4.08689 7.17093L10 12.5917L15.9131 7.17093C15.9722 7.11674 16.0424 7.07375 16.1197 7.04442C16.1969 7.01509 16.2797 7 16.3633 7C16.4469 7 16.5297 7.01509 16.607 7.04442C16.6842 7.07375 16.7544 7.11674 16.8135 7.17093C16.8726 7.22512 16.9195 7.28946 16.9515 7.36026C16.9835 7.43107 17 7.50695 17 7.58359C17 7.66023 16.9835 7.73612 16.9515 7.80692C16.9195 7.87773 16.8726 7.94206 16.8135 7.99625Z" fill="#1C1F33"/>
                 </svg>
 
                 </button>
-                <div class="works__dropdown-content">
-                    <a class="works__dropdown-link" href="./baddiecon.html">BaddieCon 2024</a>
-                    <a class="works__dropdown-link" href="./buildathon.html">Buildathon</a>
-                    <a class="works__dropdown-link" href="./subtrac.html">Subtrac</a>
-                    <a class="works__dropdown-link" href="./prepper.html">Prepper</a>
+                <div class="work__dropdown-content">
+                    <a class="work__dropdown-link" href="./baddiecon.html">BaddieCon 2024</a>
+                    <a class="work__dropdown-link" href="./buildathon.html">Buildathon</a>
+                    <a class="work__dropdown-link" href="./subtrac.html">Subtrac</a>
+                    <a class="work__dropdown-link" href="./prepper.html">Prepper</a>
                 </div>
 
                 <a class="header__about" href="./about.html"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,14 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
             </nav>
         </header>`;
 
-    // "Works" dropdown button, and "Works" dropdown content
-    let worksToggle = document.getElementsByClassName("works__dropdown-btn")[0];
-    let worksDropdownContent = document.getElementsByClassName("works__dropdown-content")[0];
+    // "Work" dropdown button, and "Work" dropdown content
+    let workToggle = document.getElementsByClassName("work__dropdown-btn")[0];
+    let workDropdownContent = document.getElementsByClassName("work__dropdown-content")[0];
 
-    // Toggle visbility of "Works" dropdown content when "Works" button is clicked
-    worksToggle.addEventListener("click", function (event) {
+    // Toggle visbility of "Work" dropdown content when "Work" button is clicked
+    workToggle.addEventListener("click", function (event) {
         collapseContactDropdown();
-        worksDropdownContent.style.display = worksDropdownContent.style.display === "block" ? "none" : "block";
+        workDropdownContent.style.display = workDropdownContent.style.display === "block" ? "none" : "block";
         event.stopPropagation();
     });
 
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.stopPropagation();
     });
 
-    // Collapse "Works" dropdown content and "Contact" dropdown content
+    // Collapse "Work" dropdown content and "Contact" dropdown content
     // whenever a click is made to the page
     document.addEventListener("click", function (event) {
         closeAllDropdowns();
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function collapseWorksDropdown() {
-        worksDropdownContent.style.display = "none";
+        workDropdownContent.style.display = "none";
     }
 
     function collapseContactDropdown() {
