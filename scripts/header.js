@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img class="logo" src="./images/logo.svg" alt="logo" />
                 <div class="header__name">Nicole Bermeo</div>
             </a>
-            <button class="hamburger">
+            <button class="hamburger" aria-label="Open navigation menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -97,6 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
         collapseContactDropdown();
         navDropdown.style.display = navDropdown.style.display === "" ? "flex" : "";
         headerName.style.display = headerName.style.display === "" ? "none" : "";
+
+        // toggle aria attribute
+        navToggle.setAttribute("aria-label", navToggle.getAttribute("aria-label") === "Open navigation menu" ? "Close navigation menu" : "Open navigation menu");
     }
 
     function closeAllDropdowns() {
@@ -107,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function closeHamburger() {
         bars.forEach((bar) => bar.classList.remove("x"));
+        hamburger.setAttribute("aria-label", "Open navigation menu");
         navDropdown.style.display = "";
         headerName.style.display = "";
     }
