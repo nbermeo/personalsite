@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     header.outerHTML = `
         <header class="header">
             <a class="brand" href="/">
-                <img class="logo" src="./images/logo.svg" alt="logo" />
+                <img class="logo" src="./images/logo.svg" width="68" height="68" alt="logo" />
                 <div class="header__name">Nicole Bermeo</div>
             </a>
             <button class="hamburger" aria-label="Open navigation menu">
@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 </svg>
                 About</a>
                 <div class="header__contact">
-                    <button class="contact__dropdown-btn"><img src="./images/envelope.svg" alt="envelope" />Contact<img src="./images/caretdownpurple.svg" alt="caretdownpurple" /></button>
+                    <button class="contact__dropdown-btn"><img src="./images/envelope.svg" width="20" height="20"alt="envelope" />Contact<img src="./images/caretdownpurple.svg" width="20" height="20" alt="caretdownpurple" /></button>
                     <div class="contact__dropdown-content">
                         <a class="contact__list-item-middle" href="mailto:bermeo.nicole@gmail.com">Email</a>
                         <a class="contact__list-item-last" target="_blank" href="https://www.linkedin.com/in/nbermeo/">LinkedIn</a>
                     </div>
                 </div>
-                <a class="button__purple resume__btn" href="./documents/Nicole_Bermeo_UXD_resume.pdf" target="_blank"><img src="./images/scroll.svg" alt="scroll" />View Resume</a>
+                <a class="button__purple resume__btn" href="./documents/Nicole_Bermeo_UXD_resume.pdf" target="_blank"><img src="./images/scroll.svg" width="20" height="20" alt="scroll" />View Resume</a>
             </nav>
         </header>`;
 
