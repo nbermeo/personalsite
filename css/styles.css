@@ -42,7 +42,8 @@ a:active {
     text-decoration: none;
 }
 
-img {
+img,
+video {
     max-width: 100%;
     height: auto;
 }
@@ -685,7 +686,18 @@ h2.project-brief__heading {
 }
 
 .phone-radius {
-    border-radius: 50px;
+    border-radius: 30px;
+}
+
+.proto-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+
+.proto-col-text {
+    max-width: 70%;
 }
 
 /* TODO: Fix this, paragraph in the prototypes on desktop is too wide, same on tablet, mobile is fine
@@ -786,6 +798,22 @@ body .footer__email:hover,
 
 .header__works-bag:hover {
     fill: #8c358b;
+}
+
+.phone-proto {
+    align-self: center;
+    max-height: 400px;
+    width: auto;
+}
+
+.prototypes {
+    gap: 0px;
+    align-items: center;
+}
+
+.prototypes > * {
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 /* actions - end */
