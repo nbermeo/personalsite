@@ -52,10 +52,6 @@ video {
     max-width: 50%;
 }
 
-.row-smaller-size {
-    max-width: 400px;
-}
-
 body {
     background: #fff4e9;
     font-family: "Source Sans 3";
@@ -698,6 +694,10 @@ h2.project-brief__heading {
 
 .proto-col-text {
     max-width: 70%;
+}
+
+.row-smaller-size {
+    max-width: 300px;
 }
 
 /* TODO: Fix this, paragraph in the prototypes on desktop is too wide, same on tablet, mobile is fine
