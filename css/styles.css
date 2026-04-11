@@ -532,9 +532,17 @@ body .contact__linkedin-btn {
 }
 
 .project__group__successresults {
+    flex-grow: 1;
+    display: flex;
     justify-content: space-around;
+    overflow: hidden;
 }
 
+.project__group__successresults img {
+    max-width: 48%;
+    flex-shrink: 1;
+    min-width: 0;
+}
 .project__group__bordered {
     gap: 0px;
 }
@@ -1254,5 +1262,9 @@ body .footer__email:hover,
 
     .about__image {
         max-width: 60%;
+    }
+
+    .project__group__successresults img {
+        max-width: 100%;
     }
 }
